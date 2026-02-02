@@ -14,12 +14,13 @@
     
     <Target Name="GenerateMod" AfterTargets="PostBuildEvent">
 		<ItemGroup>
-			<RemovePlugins Include="../mod/plugins/*.dll" />
+			<RemovePlugins Include="../mod/newest/plugins/*.dll" />
+      <RemovePlugins Include="../mod/newest/plugins/*.pdb" />
 		</ItemGroup>
 		<ItemGroup>
 			<CopyPlugins Include="$(TargetPath)" />
+      <CopyPlugins Include="$(TargetDir)$(TargetName).pdb" Condition="Exists('$(TargetDir)$(TargetName).pdb')" />
 		</ItemGroup>
-		
         <Delete Files="@(RemovePlugins)" />
         <Copy SourceFiles="@(CopyPlugins)" DestinationFolder="../mod/newest/plugins/" />
     </Target>

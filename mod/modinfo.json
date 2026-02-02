@@ -1,10 +1,10 @@
 ﻿{
-	"id": "author.slugtemplate",
-	"name": "Slugcat Template",
+	"id": "author.rwtemplate",
+	"name": "RWMod Template",
 	"version": "0.1.0",
 	"authors": "Author",
-	"description": "A template for making SlugBase mods.",
-	"requirements": [ "slime-cubed.slugbase" ],
-	"requirements_names": [ "SlugBase" ],
-	"tags": [ "Custom Slugcat" ]
+	"description": "A template for making RW mods.",
+	"requirements": [],
+	"requirements_names": [],
+	"tags": []
 }
